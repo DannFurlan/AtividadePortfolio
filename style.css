@@ -1,0 +1,183 @@
+body{
+    margin: 0;
+    background-color: #060022ec;
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav ul{
+    display: flex;
+    gap: 50px;
+    list-style: none;
+    margin: 0;
+    padding: 17px 25px;
+    background-color: #26023d;
+    justify-content: center;    
+    border-radius: 8px;
+    border-color: #ffffff;
+    border-width: 1px;
+    border-style: solid;
+}
+
+nav a{
+    color: #03d383;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+  color: #03a9d3;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #060022;
+}
+
+img{
+    width: 400px;
+    height: auto;
+    border-radius: 8%;
+}
+
+.Destaque{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: #ffffff;
+    display: flex;
+    align-items: center;    
+}
+
+.Inicio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 20px;
+}
+
+.Secundario{
+    max-width: 700px;
+    text-align: left;
+}
+
+.Titulo h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 64px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-top: 140px;
+}
+
+.Secundario h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #ffffff;
+    margin: 10px 0 30px 0;
+}
+
+.Secundario p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #5f7a94;
+    margin: 0;
+}
+
+footer{
+    text-align: center;
+    padding: 20px;
+    background-color: #060022;
+    border-top: 1px solid #26023d;
+}
+
+Footer p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #5f7a94;
+    margin: 0;
+}
+
+.AreaBotao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+.Botao{
+    display: inline-block;
+    margin-top: 35px;
+    padding: 14px 28px;
+    border: 2px solid #03d383;
+    border-radius: 8px;
+    color: #03d383;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.Botao:hover{
+    background-color: #03d383;
+    color: #ffffff;
+}
+
+@keyframes aparecer{
+    from{
+        opacity: 0;                  
+        transform: translateY(30px);
+    }
+    to{
+        opacity: 1;               
+        transform: translateY(0);
+    }
+}
+
+.Secundario{
+    animation: aparecer 1s ease-out;
+}
+
+nav a.Ativo{
+    color: #03a9d3;
+}
+
+
+/* Responsividade */
+
+@media (max-width: 768px){
+    nav ul{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 18px;
+        padding: 12px 15px;
+    }
+
+    .Destaque{
+        width: 100%;
+        justify-content: center;
+        margin-right: 0;
+        font-size: 18px;
+    }
+
+    nav a{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px){
+    nav ul{
+        gap: 8px 14px;
+    }
+
+    .Destaque{
+        font-size: 16px;
+    }
+
+    nav a{
+        font-size: 13px;
+    }
+}
